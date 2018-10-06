@@ -86,11 +86,11 @@ for Kotlin and it's present backend environment.
 ---
 @title[Syllabus]
 1. Kotlin basics
-1. Kotlin advance topics
+1. Kotlin advanced topics
 1. Web
 1. Storage
 1. Infrastructure
-1. Course Project
+1. Final Project
 
 ---
 @title[Course links]
@@ -113,7 +113,7 @@ for Kotlin and it's present backend environment.
 - \+ extra points for course improvements (PR, fixes, etc)
 
 **Certificate:**  
-get @css[highlight](50+ points) and pass @css[highlight](Final Project) 
+get @css[highlight](70+ points) and pass @css[highlight](Final Project) 
 
 **Marks:**  
 **3**: 70+  
@@ -166,23 +166,23 @@ Project should be done in small groups of 2-3 students.
 
 | Type          | Range             |
 | ------------- | -----------------:|
-| Boolean       | true/false        |
-| Byte          | -128-127          |
-| Char          | \u0000-\uffff     |
-| Short         | -32768 - 32767    |
-| Int           | -2^31 - (2^31)-1  |
-| Long          | -2^63 - (2^63)-1  |
+| Boolean       | true / false        |
+| Byte          | -128 .. 127          |
+| Char          | \u0000 .. \uffff     |
+| Short         | -32768 .. 32767    |
+| Int           | `-2^31` - `2^31`-1  |
+| Long          | `-2^63` - `2^63`-1  |
 | Float         | IEEE 754          |
 | Double        | IEEE 754          |
 
 
----?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/valvar.kt&title=`val` & `var`
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/valvar.kt&title=`val` and `var`
 <!-- .slide: class="center" -->
 
 @[3](Assigning a value)
 @[5](Assigning a list)
 @[7](Assigning an array)
-@[10-14](variable could be modified)
+@[9-13](variable could be modified)
 
 
 ---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/if.kt&title=`if` expression
@@ -200,6 +200,13 @@ Project should be done in small groups of 2-3 students.
 @[3-9](when conditions)
 @[11-15](... and after some simplification)
 
+
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/loop.kt&title=`for`
+<!-- .slide: class="center" -->
+
+@[3-11](Plain old `for` loop)
+@[13-17](Functional approach)
+@[19-22](`repeat` construction)
 
 ---
 @title[Agenda]
@@ -246,7 +253,7 @@ Project = 1+ tasks (compile class, create jar, generate javadoc)
 ---
 @title[build.gradle]
 
-`build.gradle.kts` - is a build configuration script build with Gradle Kotlin DSL.
+`build.gradle.kts` - is a build configuration script written with Gradle Kotlin DSL.
 
 It is a kotlin script
 - compilable
@@ -257,15 +264,15 @@ It is a kotlin script
 ---?code=lecture01/build.gradle.kts&title=build.gradle.kts
 <!-- .slide: class="center" -->
 
-@[2-3](Standard project versioning)
+@[4,5](Standard project versioning)
 
-@[6-8](Plugin section configures the plugin dependencies for this project)
+@[7-9](Plugin section configures the plugin dependencies for this project)
 
-@[10-12](`KotlinCompile` task with target jvm version configured)
+@[11-13](`KotlinCompile` task with target jvm version configured)
 
-@[18-21](Project dependencies)
+@[21-23,26](Project dependencies)
 
-@[14-16](Dependencies repo configuration)
+@[15-17](Dependencies repo configuration)
 
 
 ---
@@ -301,9 +308,9 @@ It tracks all branches and pull requests
 
 [kotlin boot camp on travis](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/pull_requests)
 
-**check your pull requests there!**
+**Check your pull requests there!**
 
-**all tests should pass!**
+**All tests should pass!**
 
 
 ---
@@ -320,7 +327,7 @@ It tracks all branches and pull requests
 @title[Assignment 1]
 1. Fix tests in branch **assignment01** and push it to **your fork**  
 [[Github branch]](https://github.com/rybalkinsd/kotlin-boot-camp/tree/assignment01)
-[[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/builds/204177834)
+[[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp)
 2. Make pull request to the [**course repository**](https://github.com/rybalkinsd/kotlin-boot-camp)  
 (from your branch **assignment01** to ours **assignment01**)
 3. Write your **first name** and **family name** in description of pull request
